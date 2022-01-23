@@ -14,10 +14,15 @@
     "dialect": "postgres"
   },
   "production": {
-    "username": "qngjhxfftklkmk",
-    "password": "c70896c10f7f6a962715f223d6d8c5affcca4a953a6ad6e4ff1c5d898e4a9129",
-    "database": "d4e4gsrs0378tg",
-    "host": "ec2-23-23-164-251.compute-1.amazonaws.com",
-    "dialect": "postgres"
+    "use_env_variable": "DATABASE_URI",
+    "dialect": "postgres",
+    "protocol": "postgres",
+    "ssl": true,
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   }
 }
